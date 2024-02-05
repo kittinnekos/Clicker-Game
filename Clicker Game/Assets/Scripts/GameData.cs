@@ -8,7 +8,7 @@ public static class GameData
         buyButtonUp = 4,
         buyButtonCenter = 5,
         buyButtonDown = 6,
-
     }
     public static bool[] isTap = new bool[7];
+    public static int Score = 0;
 }
