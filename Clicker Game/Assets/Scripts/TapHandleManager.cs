@@ -19,10 +19,12 @@ public class TapHandleManager : MonoBehaviour
         {
             case var istap when istap[(int)start] == true:
             SceneManager.LoadScene("InGame");
-            istap[(int)start] = false;
+            isTap[(int)start] = false;
             break;
 
             case var istap when istap[(int)dragon] == true:
+            Score++;
+            isTap[(int)dragon] = false;
             break;
 
             case var istap when istap[(int)selectButtonRight] == true:
