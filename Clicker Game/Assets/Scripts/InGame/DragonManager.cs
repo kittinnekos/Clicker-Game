@@ -25,7 +25,6 @@ public class DragonManager : MonoBehaviour
 
     void OnButtonClick()
     {
-        Debug.Log("a");
         isTap[(int)dragon] = true;
     }
 }
