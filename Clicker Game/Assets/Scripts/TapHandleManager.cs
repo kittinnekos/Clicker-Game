@@ -27,6 +27,11 @@ public class TapHandleManager : MonoBehaviour
             isTap[(int)dragon] = false;
             break;
 
+            case var istap when istap[(int)boss] == true:
+            Score++;
+            isTap[(int)boss] = false;
+            break;
+
             case var istap when istap[(int)selectButtonRight] == true:
             break;
 
