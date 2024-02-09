@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using static GameData;
 using static GameData.TapStatus;
 
-public class DragonManager : MonoBehaviour
+public class SelectButtonRightClickListener : MonoBehaviour
 {
     void Start()
     {
@@ -25,6 +25,8 @@ public class DragonManager : MonoBehaviour
 
     void OnButtonClick()
     {
-        isTap[(int)dragon] = true;
+        // MAX_BUY_BUTTONSが要素数の最大値のため-1している
+        if(cullentBuyButtons >= MAX_BUY_BUTTONS -1) return;
+        isTap[(int)selectButtonRight] = true;
     }
 }

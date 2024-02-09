@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using static GameData;
 using static GameData.TapStatus;
 
-public class BossManager : MonoBehaviour
+public class SelectButtonLeftClickListener : MonoBehaviour
 {
     void Start()
     {
@@ -25,6 +25,7 @@ public class BossManager : MonoBehaviour
 
     void OnButtonClick()
     {
-        isTap[(int)boss] = true;
+        if(cullentBuyButtons <= 0) return;
+        isTap[(int)selectButtonLeft] = true;
     }
 }
