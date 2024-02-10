@@ -22,7 +22,8 @@ public static class GameData
     public static int[,] BuyStack = new int[2,3];
 
     public static int Score = 100;
-    public static int cullentBuyButtons = 0;
+    public static int currentStage = 0;
+    public static int currentBuyButtons = 0;
 
     public static int [] price = new int [MAX_PRICE_COUNT]
     {BASE_PRICE,

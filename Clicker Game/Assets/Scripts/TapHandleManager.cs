@@ -42,12 +42,12 @@ public class TapHandleManager : MonoBehaviour
 
             // 右矢印か左矢印を押すと購入ボタンを切り替える
             case var istap when istap[(int)selectButtonRight] == true:
-            cullentBuyButtons++;
+            currentBuyButtons++;
             isTap[(int)selectButtonRight] = false;
             break;
 
             case var istap when istap[(int)selectButtonLeft] == true:
-            cullentBuyButtons--;
+            currentBuyButtons--;
             isTap[(int)selectButtonLeft] = false;
             break;
 

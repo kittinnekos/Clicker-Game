@@ -13,7 +13,7 @@ public class BuyManager : MonoBehaviour
     {
         // 今の購入ボタンの押されたボタンが値段を上げる最大回数-1より押されたときは買えないようにする
         // MAX_PRICE_COUNTは値段を上げる最大回数のため-1している
-        if(BuyStack[cullentBuyButtons, BuyButtons] > MAX_PRICE_COUNT-1)
+        if(BuyStack[currentBuyButtons, BuyButtons] > MAX_PRICE_COUNT-1)
         {
             Debug.Log("kaenai");
             return;
@@ -38,7 +38,7 @@ public class BuyManager : MonoBehaviour
     {
         int totalRequiredScore = 0;
 
-        totalRequiredScore += price[BuyStack[cullentBuyButtons, BuyButtons]];
+        totalRequiredScore += price[BuyStack[currentBuyButtons, BuyButtons]];
 
         return totalRequiredScore;
     }
@@ -47,7 +47,7 @@ public class BuyManager : MonoBehaviour
     private static void PerformPurchase(int BuyButtons)
     {
         Score -= CalculateRequiredScore(BuyButtons);
-        BuyStack[cullentBuyButtons, BuyButtons]++;
+        BuyStack[currentBuyButtons, BuyButtons]++;
         Debug.Log("Purchase successful. Remaining score: " + Score);
     }
 

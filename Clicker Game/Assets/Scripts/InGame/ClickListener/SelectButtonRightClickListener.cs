@@ -26,7 +26,7 @@ public class SelectButtonRightClickListener : MonoBehaviour
     void OnButtonClick()
     {
         // MAX_BUY_BUTTONSが要素数の最大値のため-1している
-        if(cullentBuyButtons >= MAX_BUY_BUTTONS -1) return;
+        if(currentBuyButtons >= MAX_BUY_BUTTONS -1) return;
         isTap[(int)selectButtonRight] = true;
     }
 }

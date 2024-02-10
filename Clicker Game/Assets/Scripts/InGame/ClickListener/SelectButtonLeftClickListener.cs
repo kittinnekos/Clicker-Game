@@ -25,7 +25,7 @@ public class SelectButtonLeftClickListener : MonoBehaviour
 
     void OnButtonClick()
     {
-        if(cullentBuyButtons <= 0) return;
+        if(currentBuyButtons <= 0) return;
         isTap[(int)selectButtonLeft] = true;
     }
 }

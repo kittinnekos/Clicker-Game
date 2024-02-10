@@ -40,8 +40,8 @@ public class ShiftBuyButtonsSplite : MonoBehaviour
     // 画像を今の購入ボタンに合わせて切り替える
     void ShiftBuyButtons()
     {
-        BuyButtonUpImg.sprite = BuyButtonsUp[cullentBuyButtons];
-        BuyButtonSenterImg.sprite = BuyButtonsCenter[cullentBuyButtons];
-        BuyButtonDownImg.sprite = BuyButtonsDown[cullentBuyButtons];
+        BuyButtonUpImg.sprite = BuyButtonsUp[currentBuyButtons];
+        BuyButtonSenterImg.sprite = BuyButtonsCenter[currentBuyButtons];
+        BuyButtonDownImg.sprite = BuyButtonsDown[currentBuyButtons];
     }
 }
