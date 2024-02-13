@@ -11,8 +11,15 @@ public class BuyManager : MonoBehaviour
     // このメソッドを呼び出すことで購入処理が行われます
     public static void TryPurchase(int BuyButtons)
     {
-        // 今の購入ボタンの押されたボタンが値段を上げる最大回数-1より押されたときは買えないようにする
+        // 成長ボタンが購入上限になった時は購入履歴をリセットして次のステージに切り替わるようにする
         // MAX_PRICE_COUNTは値段を上げる最大回数のため-1している
+        if(currentBuyButtons == 0 && BuyButtons == 0 && BuyStack[currentBuyButtons, BuyButtons] == MAX_PRICE_COUNT-1)
+        {
+            ClearBuyStack(currentBuyButtons, BuyButtons);
+            ChangeStageFlag = true;
+        }
+
+        // 今の購入ボタンの押されたボタンが値段を上げる最大回数-1より押されたときは買えないようにする
         if(BuyStack[currentBuyButtons, BuyButtons] > MAX_PRICE_COUNT-1)
         {
             Debug.Log("kaenai");
@@ -51,15 +58,8 @@ public class BuyManager : MonoBehaviour
         Debug.Log("Purchase successful. Remaining score: " + Score);
     }
 
-    private static void ClearBuyStack()
+    private static void ClearBuyStack(int i, int j)
     {
-        // 購入履歴をクリアする処理を実装
-        for (int i = 0; i < 2; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                BuyStack[i, j] = 0;
-            }
-        }
+        BuyStack[i, j] = 0;
     }
 }
