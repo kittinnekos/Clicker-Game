@@ -8,6 +8,13 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
 {
     private const float MAX_COUNT = 3.0f;
     private float[,] count = new float[2,3];
+    private int CheckGrowthBuyStack = BuyStack[0,0]; // 確認用成長ボタンの購入履歴
+
+    BuyManager buyManager;
+    void Start()
+    {
+        buyManager = gameObject?.GetComponent<BuyManager>();
+    }
 
     void Update()
     {
@@ -15,7 +22,7 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
     }
 
     // 購入履歴をもとに購入された分、定期的にスコアを加算する
-    public void AddScorePeriodically()
+    void AddScorePeriodically()
     {
         // ｃは切り替える購入ボタン。ｂは購入ボタンの数。
         for(int c = 0;c < 2;c++)
@@ -26,11 +33,12 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
                 if(BuyStack[c,b]==0) continue;
 
                 // 成長ボタンの処理
-                if(c == 0 && b == 0 && BuyStack[c,b] != 0)
+                if(c == 0 && b == 0 && BuyStack[c,b] != 0 && CheckGrowthBuyStack < BuyStack[c,b])
                 {
-                    // TODO 成長ボタンの処理
+                    AddTapScore++;
+                    CheckGrowthBuyStack++;
                 }
-                else if(BuyStack[c,b] != 0)
+                else if(c != 0 && b != 0 &&BuyStack[c,b] != 0)
                 {
                     count[c,b] += 1 * Time.deltaTime;
                     if(count[c,b] < MAX_COUNT) continue;
@@ -38,8 +46,11 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
                     count[c,b] = 0;
                     Debug.Log(c + ","+ b + "BuyStack:" + BuyStack[c,b]);
                 }
-                
             }
         }
-    } 
+
+        // ステージが切り替わったら確認用成長ボタンの購入履歴をリセットする
+        if(!ChangeStageFlag) return;
+        CheckGrowthBuyStack = 0;
+    }
 }
