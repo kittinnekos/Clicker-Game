@@ -15,15 +15,21 @@ public static class GameData
     private const int BASE_PRICE = 1;
     
     public const int MAX_PRICE_COUNT = 10;
-    public const int MAX_BUY_BUTTONS = 2;
+    public const int MAX_SHIFT_BUY_BUTTONS = 2;
+    public const int MAX_STAGE_NUM = 4;
     public const int BASE_ADD_SCORE = 5;
 
     public static bool[] isTap = new bool[9];
     public static int[,] BuyStack = new int[2,3];
 
     public static int Score = 100;
+    public static int AddTapScore = 1;
+
     public static int currentStage = 0;
     public static int currentBuyButtons = 0;
+
+    public static bool ChangeStageFlag = false;
+    public static bool ChangeDragonFlag = false, ChangeBossFlag = false, ChangeEnemyFlag = false; 
 
     public static int [] price = new int [MAX_PRICE_COUNT]
     {BASE_PRICE,

@@ -7,9 +7,9 @@ using static GameData;
 
 public class ShiftBuyButtonsSplite : MonoBehaviour
 {
-    public Sprite[] BuyButtonsUp = new Sprite[MAX_BUY_BUTTONS];
-    public Sprite[] BuyButtonsCenter = new Sprite[MAX_BUY_BUTTONS];
-    public Sprite[] BuyButtonsDown = new Sprite[MAX_BUY_BUTTONS];
+    public Sprite[] BuyButtonsUp = new Sprite[MAX_SHIFT_BUY_BUTTONS];
+    public Sprite[] BuyButtonsCenter = new Sprite[MAX_SHIFT_BUY_BUTTONS];
+    public Sprite[] BuyButtonsDown = new Sprite[MAX_SHIFT_BUY_BUTTONS];
 
     private Image BuyButtonUpImg;
     private Image BuyButtonSenterImg;
