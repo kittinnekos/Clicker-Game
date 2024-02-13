@@ -13,7 +13,7 @@ public class SpawnDragon : MonoBehaviour
 
     void Start()
     {
-        canvas = GameObject.Find("Canvas");
+        canvas = GameObject.Find("Dragon,BossCanvas");
         DragonObject = Instantiate(DragonPrefab[currentStage], DragonPrefab[currentStage].transform.position, Quaternion.identity);
         DragonObject.transform.SetParent(canvas.transform,false);
     }

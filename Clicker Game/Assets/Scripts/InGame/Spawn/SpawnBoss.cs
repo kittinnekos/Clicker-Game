@@ -13,7 +13,7 @@ public class SpawnBoss : MonoBehaviour
 
     void Start()
     {
-        canvas = GameObject.Find("Canvas");
+        canvas = GameObject.Find("Dragon,BossCanvas");
         BossObject = Instantiate(BossPrefab[currentStage], BossPrefab[currentStage].transform.position, Quaternion.identity);
         BossObject.transform.SetParent(canvas.transform,false);
     }
