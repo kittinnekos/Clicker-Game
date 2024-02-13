@@ -29,7 +29,7 @@ public static class GameData
     public static int currentBuyButtons = 0;
 
     public static bool ChangeStageFlag = false;
-    public static bool ChangeDragonFlag = false, ChangeBossFlag = false, ChangeEnemyFlag = false; 
+    public static bool ChangePlanetFlag = false, ChangeDragonFlag = false, ChangeBossFlag = false, ChangeEnemyFlag = false; 
 
     public static int [] price = new int [MAX_PRICE_COUNT]
     {BASE_PRICE,
