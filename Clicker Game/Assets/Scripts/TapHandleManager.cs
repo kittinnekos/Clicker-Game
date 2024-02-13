@@ -31,12 +31,12 @@ public class TapHandleManager : MonoBehaviour
 
             // ドラゴンかボスを押したらスコアを加算する
             case var istap when istap[(int)dragon] == true:
-            Score++;
+            Score += AddTapScore;
             isTap[(int)dragon] = false;
             break;
 
             case var istap when istap[(int)boss] == true:
-            Score++;
+            Score += AddTapScore;
             isTap[(int)boss] = false;
             break;
 
