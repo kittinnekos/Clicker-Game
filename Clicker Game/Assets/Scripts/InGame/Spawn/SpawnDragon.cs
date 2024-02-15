@@ -20,7 +20,6 @@ public class SpawnDragon : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(AddTapScore);
         if(!ChangeDragonFlag || currentStage == MAX_STAGE_NUM) return;
         ShiftDragon();
         ChangeDragonFlag = false;

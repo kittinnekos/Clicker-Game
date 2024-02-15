@@ -20,7 +20,6 @@ public class SpawnPlanet : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(AddTapScore);
         if(!ChangePlanetFlag || currentStage == MAX_STAGE_NUM) return;
         ShiftPlanet();
         ChangePlanetFlag = false;
