@@ -40,6 +40,12 @@ public class TapHandleManager : MonoBehaviour
             isTap[(int)boss] = false;
             break;
 
+            // TODO 敵画像を押したらタップで増えるスコア×２の値スコアに加算する
+            case var istap when istap[(int)enemy] == true:
+            Score += AddTapScore * 2;
+            isTap[(int)enemy] = false;
+            break;
+
             // 右矢印か左矢印を押すと購入ボタンを切り替える
             case var istap when istap[(int)selectButtonRight] == true:
             currentBuyButtons++;
@@ -51,6 +57,7 @@ public class TapHandleManager : MonoBehaviour
             isTap[(int)selectButtonLeft] = false;
             break;
 
+            // 購入ボタン
             case var istap when istap[(int)buyButtonUp] == true:
             BuyManager.TryPurchase((int)buyButtonUp-6); // 0を渡したいため-6している
             isTap[(int)buyButtonUp] = false;

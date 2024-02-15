@@ -15,9 +15,13 @@ public static class GameData
     private const int BASE_PRICE = 1;
     
     public const int MAX_PRICE_COUNT = 10;
+    public const int BASE_ADD_SCORE = 5;
     public const int MAX_SHIFT_BUY_BUTTONS = 2;
     public const int MAX_STAGE_NUM = 4;
-    public const int BASE_ADD_SCORE = 5;
+    public const int MAX_SPAWN_ENEMY = 10;
+    public const int ENEMY_NUM = 2;
+    public const float ENEMY_SPEED = 1.0f;
+
 
     public static bool[] isTap = new bool[9];
     public static int[,] BuyStack = new int[2,3];
