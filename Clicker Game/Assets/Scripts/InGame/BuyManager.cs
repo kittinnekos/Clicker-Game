@@ -6,9 +6,7 @@ using static GameData;
 
 public class BuyManager : MonoBehaviour
 {
-    // TODO 購入履歴を元に必要なスコアを出し、持っているスコアと比べて購入するしないを決める
-
-    // このメソッドを呼び出すことで購入処理が行われます
+    // 購入処理
     public static void TryPurchase(int BuyButtons)
     {
         // 成長ボタンが購入上限になった時は購入履歴をリセットして次のステージに切り替わるようにする
