@@ -22,7 +22,7 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
     }
 
     // 購入履歴をもとに購入された分、定期的にスコアを加算する
-    public void AddScorePeriodically()
+    void AddScorePeriodically()
     {
         // ｃは切り替える購入ボタン。ｂは購入ボタンの数。
         for(int c = 0;c < 2;c++)
