@@ -22,7 +22,7 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
     }
 
     // 購入履歴をもとに購入された分、定期的にスコアを加算する
-    void AddScorePeriodically()
+    public void AddScorePeriodically()
     {
         // ｃは切り替える購入ボタン。ｂは購入ボタンの数。
         for(int c = 0;c < 2;c++)
@@ -31,20 +31,19 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
             {
                 // 購入していないときは次のループ
                 if(BuyStack[c,b]==0) continue;
-
                 // 成長ボタンの処理
                 if(c == 0 && b == 0 && BuyStack[c,b] != 0 && CheckGrowthBuyStack < BuyStack[c,b])
                 {
                     AddTapScore++;
                     CheckGrowthBuyStack++;
                 }
-                else if(c != 0 && b != 0 &&BuyStack[c,b] != 0)
+                // 成長ボタン以外は一定時間でスコアを加算
+                else if(c != 0 && BuyStack[c,b] != 0 || b != 0 && BuyStack[c,b] != 0)
                 {
                     count[c,b] += 1 * Time.deltaTime;
                     if(count[c,b] < MAX_COUNT) continue;
                     Score += BASE_ADD_SCORE * BuyStack[c,b];
                     count[c,b] = 0;
-                    Debug.Log(c + ","+ b + "BuyStack:" + BuyStack[c,b]);
                 }
             }
         }
