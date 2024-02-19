@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 
 using static GameData;
 using static GameData.TapStatus;
+using static BuyManager;
 
 public class TapHandleManager : MonoBehaviour
 {
-    BuyManager buyManager;
-    void Start()
-    {
-        buyManager = gameObject?.GetComponent<BuyManager>();
-    }
-
     void Update()
     {
         TapStatusHandler();
@@ -59,17 +54,17 @@ public class TapHandleManager : MonoBehaviour
 
             // 購入ボタン
             case var istap when istap[(int)buyButtonUp] == true:
-            BuyManager.TryPurchase((int)buyButtonUp-6); // 0を渡したいため-6している
+            TryPurchase((int)buyButtonUp-6); // 0を渡したいため-6している
             isTap[(int)buyButtonUp] = false;
             break;
 
             case var istap when istap[(int)buyButtonCenter] == true:
-            BuyManager.TryPurchase((int)buyButtonCenter-6); // 1を渡したいため-6している
+            TryPurchase((int)buyButtonCenter-6); // 1を渡したいため-6している
             isTap[(int)buyButtonCenter] = false;
             break;
 
             case var istap when istap[(int)buyButtonDown] == true:
-            BuyManager.TryPurchase((int)buyButtonDown-6); // 2を渡したいため-6している
+            TryPurchase((int)buyButtonDown-6); // 2を渡したいため-6している
             isTap[(int)buyButtonDown] = false;
             break;
 
