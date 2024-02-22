@@ -22,7 +22,6 @@ public class NumImageManager : MonoBehaviour
     {
         if(latestScore != Score)
         {
-            Debug.Log("a");
             UpdateNumberDisplay();
         }
     }
