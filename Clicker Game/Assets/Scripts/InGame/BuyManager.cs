@@ -30,6 +30,7 @@ public class BuyManager : MonoBehaviour
         {
             // 購入可能な場合の処理
             PerformPurchase(BuyButtons);
+            isBuySound = true; // 音を鳴らす真偽値
         }
         else
         {

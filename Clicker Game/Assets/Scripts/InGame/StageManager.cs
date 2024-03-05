@@ -19,6 +19,7 @@ public class StageManager : MonoBehaviour
         currentStage++;
         ChangeStageFlag = false;
         ChangePlanetFlag = true; ChangeDragonFlag = true; ChangeBossFlag = true; ChangeEnemyFlag = true;
+        ChangeStageSoundFlag = true;
     }
 
     void EndGame()

@@ -13,11 +13,6 @@ public class SpawnFriend : MonoBehaviour
 
     public GameObject[] FriendPrefab = new GameObject[SPAWN_FRIEND_NUM];
 
-    // private Vector3[] FriendPosition = new Vector3[SPAWN_FRIEND_NUM] 
-    // {
-
-    // }
-
     void Start()
     {
         canvas = GameObject.Find("FriendCanvas");
@@ -46,14 +41,14 @@ public class SpawnFriend : MonoBehaviour
         {
             switch(j)
             {
-                case 1:
+                case 1: // マモノ
                 if(ActiveFriendObject[0]) return;
                 FriendObject[0] = Instantiate(FriendPrefab[0]);
                 FriendObject[0].transform.SetParent(canvas.transform,false);
                 ActiveFriendObject[0] = true;
                 break;
 
-                case 2:
+                case 2: // リトルドラゴン
                 if(ActiveFriendObject[1]) return;
                 FriendObject[1] = Instantiate(FriendPrefab[1]);
                 FriendObject[1].transform.SetParent(canvas.transform,false);
@@ -68,21 +63,21 @@ public class SpawnFriend : MonoBehaviour
         {
             switch(j)
             {
-                case 0:
+                case 0: // レッドドラゴン
                 if(ActiveFriendObject[2]) return;
                 FriendObject[2] = Instantiate(FriendPrefab[2]);
                 FriendObject[2].transform.SetParent(canvas.transform,false);
                 ActiveFriendObject[2] = true;
                 break;
 
-                case 1:
+                case 1: // ハンマードラゴン
                 if(ActiveFriendObject[3]) return;
                 FriendObject[3] = Instantiate(FriendPrefab[3]);
                 FriendObject[3].transform.SetParent(canvas.transform,false);
                 ActiveFriendObject[3] = true;
                 break;
 
-                case 2:
+                case 2: // デモンドラゴン
                 if(ActiveFriendObject[4]) return;
                 FriendObject[4] = Instantiate(FriendPrefab[4]);
                 FriendObject[4].transform.SetParent(canvas.transform,false);

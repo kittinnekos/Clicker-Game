@@ -12,22 +12,24 @@ public static class GameData
         buyButtonDown = 8,
     }
 
-    private const int BASE_PRICE = 1;
+    private const int BASE_PRICE = 10;
     
+    public const int MAX_TAP_STASUS_NUM = 9; // タップした物の種類
     public const int COUNT_STOP_SCORE = 999999999; // スコアのカウント上限
     public const int MAX_PRICE_COUNT = 10;// 購入上限
     public const int MAX_SCORE_DIGIT = 9; // スコアの最大桁数
-    public const int BASE_ADD_SCORE = 5; // 基本の一定時間に追加するスコア
+    public const int BASE_ADD_SCORE = 80; // 基本の一定時間に追加するスコア
     public const int MAX_SHIFT_BUY_BUTTONS = 2; // 購入ボタンを切り替える最大回数
+    public const int BUY_BUTTON_NUM = 3; // 購入ボタンの種類
     public const int MAX_STAGE_NUM = 4; // 最大ステージ数
     public const int MAX_SPAWN_ENEMY = 10; // 敵の出現する最大数
     public const int ENEMY_NUM = 2; // ステージごとの敵の出現する種類
+    public const int SPAWN_FRIEND_NUM = 5; // 味方の出現する種類
 
+    public static bool[] isTap = new bool[MAX_TAP_STASUS_NUM];
+    public static int[,] BuyStack = new int[MAX_SHIFT_BUY_BUTTONS,BUY_BUTTON_NUM]; // 購入履歴　要素数[2,3]
 
-    public static bool[] isTap = new bool[9];
-    public static int[,] BuyStack = new int[2,3]; // 購入履歴
-
-    public static int Score = 1000000000;
+    public static int Score = 1000000;
     public static int AddTapScore = 1;
 
     public static int currentStage = 0;
@@ -37,17 +39,26 @@ public static class GameData
     public static bool ChangeStageFlag = false;
     public static bool ChangePlanetFlag = false, ChangeDragonFlag = false, ChangeBossFlag = false, ChangeEnemyFlag = false; 
 
-    public static int [] price = new int [MAX_PRICE_COUNT] // 値段
+    // ステージを切り替えたときの音を鳴らすフラグ
+    public static bool ChangeStageSoundFlag = false;
+
+    // 購入した時だけ音を鳴らす
+    public static bool isBuySound = false;
+
+    // 一定時間経過で音を鳴らす
+    public static bool isAddScorePeriodicallySound = false;
+
+    public static int [] price = new int [MAX_PRICE_COUNT] // 値段　要素数[10]
     {BASE_PRICE,
-     BASE_PRICE + 1,
-     BASE_PRICE + 2,
-     BASE_PRICE + 3,
-     BASE_PRICE + 4,
-     BASE_PRICE + 5,
-     BASE_PRICE + 6,
-     BASE_PRICE + 7,
-     BASE_PRICE + 8,
-     BASE_PRICE + 9,
+     BASE_PRICE * 10,
+     BASE_PRICE * 12,
+     BASE_PRICE * 14,
+     BASE_PRICE * 20,
+     BASE_PRICE * 32,
+     BASE_PRICE * 64,
+     BASE_PRICE * 128,
+     BASE_PRICE * 256,
+     BASE_PRICE * 512,
      };
 
 }

@@ -7,14 +7,8 @@ using static GameData;
 public class AddScorePeriodicallyHandler : MonoBehaviour
 {
     private const float MAX_COUNT = 3.0f;
-    private float[,] count = new float[2,3];
+    private float[,] count = new float[MAX_SHIFT_BUY_BUTTONS,BUY_BUTTON_NUM];
     private int CheckGrowthBuyStack = BuyStack[0,0]; // 確認用成長ボタンの購入履歴
-
-    BuyManager buyManager;
-    void Start()
-    {
-        buyManager = gameObject?.GetComponent<BuyManager>();
-    }
 
     void Update()
     {
@@ -42,6 +36,7 @@ public class AddScorePeriodicallyHandler : MonoBehaviour
                 {
                     count[c,b] += 1 * Time.deltaTime;
                     if(count[c,b] < MAX_COUNT) continue;
+                    isAddScorePeriodicallySound = true; // 音を鳴らす真偽値
                     Score += BASE_ADD_SCORE * BuyStack[c,b];
                     count[c,b] = 0;
                 }
