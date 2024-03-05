@@ -1719,30 +1719,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TapSE:
     start: {fileID: 0}
-    dragon: {fileID: 8300000, guid: d8e6ca78b3a8318498807cc1405a78da, type: 3}
-    boss: {fileID: 0}
-    enemy: {fileID: 0}
-    selectButton: {fileID: 0}
-    buyButton: {fileID: 0}
-    addScorePeriodically: {fileID: 8300000, guid: 7978557e6643dfe44a0d07ef8a9f8d75, type: 3}
-  SpawnFriendSE:
-    mamono: {fileID: 0}
-    dragons: {fileID: 0}
+    selectButton: {fileID: 8300000, guid: 0e730456a3258b04bad892d638957e0d, type: 3}
+    buyButton_Growth: {fileID: 8300000, guid: 03bbf130da2946645b74115105e89f66, type: 3}
+    buyButton_Mamono: {fileID: 8300000, guid: 9f6215cda9c63844eb0288ac9551889e, type: 3}
+    buyButton_Dragon: {fileID: 8300000, guid: 7fc3312c7d3370541a14c24ff16118ef, type: 3}
   StageByStage_DragonSE:
-    stage1_SE: {fileID: 8300000, guid: d8e6ca78b3a8318498807cc1405a78da, type: 3}
-    stage2_SE: {fileID: 8300000, guid: afbd868163e0799478e1464592dc665c, type: 3}
-    stage3_SE: {fileID: 8300000, guid: b32efab9dd660354d86b567448fb41a6, type: 3}
-    stage4_SE: {fileID: 8300000, guid: e849a30cd3fa78d43841941a9a4f2b49, type: 3}
+    stage1_SE: {fileID: 8300000, guid: ceb9db1fbd35b494aa9e6ecfd11d631e, type: 3}
+    stage2_SE: {fileID: 8300000, guid: b8876b6fb28de964c906365aedeae8bb, type: 3}
+    stage3_SE: {fileID: 8300000, guid: 6dc595a9ff037bb4f8ce3a9b603fd351, type: 3}
+    stage4_SE: {fileID: 8300000, guid: 52d702c2c1c19b4478c0b9b096a53b35, type: 3}
   StageByStage_BossSE:
-    stage1_SE: {fileID: 8300000, guid: d8e6ca78b3a8318498807cc1405a78da, type: 3}
-    stage2_SE: {fileID: 8300000, guid: afbd868163e0799478e1464592dc665c, type: 3}
-    stage3_SE: {fileID: 8300000, guid: cc5dfb05ec3e941498c594e260c717c3, type: 3}
-    stage4_SE: {fileID: 0}
+    stage1_SE: {fileID: 8300000, guid: ceb9db1fbd35b494aa9e6ecfd11d631e, type: 3}
+    stage2_SE: {fileID: 8300000, guid: b8876b6fb28de964c906365aedeae8bb, type: 3}
+    stage3_SE: {fileID: 8300000, guid: 6dc595a9ff037bb4f8ce3a9b603fd351, type: 3}
+    stage4_SE: {fileID: 8300000, guid: 52d702c2c1c19b4478c0b9b096a53b35, type: 3}
   StageByStage_EnemySE:
-    stage1_SE: {fileID: 0}
-    stage2_SE: {fileID: 0}
-    stage3_SE: {fileID: 0}
-    stage4_SE: {fileID: 0}
+    stage1_SE: {fileID: 8300000, guid: 25dd4a40d4e07f540b3b0004dc22d948, type: 3}
+    stage2_SE: {fileID: 8300000, guid: 282b8f09e73922f48b9bce37ba3117c1, type: 3}
+    stage3_SE: {fileID: 8300000, guid: 16d7e9a60a8bbd94f8af7d1ab1c2b2cb, type: 3}
+    stage4_SE: {fileID: 8300000, guid: a8c9b5a765599f94581f2216cedf25c2, type: 3}
+  FriendPeriodicallySE: {fileID: 8300000, guid: 879ebcf4356a83a489bf5998a07df383, type: 3}
 --- !u!4 &1734447941
 Transform:
   m_ObjectHideFlags: 0
