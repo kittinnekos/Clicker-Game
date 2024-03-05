@@ -522,6 +522,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab7fa0d8ff7667409d1f9b94128f85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TapSE:
+    start: {fileID: 8300000, guid: 3239fb0a4492c1d42ad748222b225e69, type: 3}
+    selectButton: {fileID: 0}
+    buyButton_Growth: {fileID: 0}
+    buyButton_Mamono: {fileID: 0}
+    buyButton_Dragon: {fileID: 0}
+  StageByStage_DragonSE:
+    stage1_SE: {fileID: 0}
+    stage2_SE: {fileID: 0}
+    stage3_SE: {fileID: 0}
+    stage4_SE: {fileID: 0}
+  StageByStage_BossSE:
+    stage1_SE: {fileID: 0}
+    stage2_SE: {fileID: 0}
+    stage3_SE: {fileID: 0}
+    stage4_SE: {fileID: 0}
+  StageByStage_EnemySE:
+    stage1_SE: {fileID: 0}
+    stage2_SE: {fileID: 0}
+    stage3_SE: {fileID: 0}
+    stage4_SE: {fileID: 0}
+  FriendPeriodicallySE: {fileID: 0}
 --- !u!4 &1087513493
 Transform:
   m_ObjectHideFlags: 0
