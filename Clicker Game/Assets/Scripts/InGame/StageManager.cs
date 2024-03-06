@@ -26,7 +26,7 @@ public class StageManager : MonoBehaviour
     {
         if(currentStage == MAX_STAGE_NUM)
         {
-            SceneManager.LoadScene("Result");
+            SceneManager.LoadScene("Ending");
         }
     }
 }

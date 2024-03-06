@@ -14,7 +14,7 @@ public static class GameData
 
     private const int BASE_PRICE = 10;
     
-    public const int MAX_TAP_STASUS_NUM = 9; // タップした物の種類
+    public const int MAX_TAP_STASUS_NUM = 9; // タップする物の種類
     public const int COUNT_STOP_SCORE = 999999999; // スコアのカウント上限
     public const int MAX_PRICE_COUNT = 10;// 購入上限
     public const int MAX_SCORE_DIGIT = 9; // スコアの最大桁数
@@ -35,10 +35,14 @@ public static class GameData
     public static int currentStage = 0;
     public static int currentBuyButtons = 0; // 今の購入ボタン
 
+    public static bool isRestartButtonTap = false;
+
     // ステージと出現する惑星、ドラゴン、ボス、敵を切り替えるフラグ
     public static bool ChangeStageFlag = false;
     public static bool ChangePlanetFlag = false, ChangeDragonFlag = false, ChangeBossFlag = false, ChangeEnemyFlag = false; 
 
+    /*サウンド関係変数*/
+    public static float SEVolume = 0.5f;
     // ステージを切り替えたときの音を鳴らすフラグ
     public static bool ChangeStageSoundFlag = false;
 

@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
+using static GameData;
 
 public class RestartClickListener : MonoBehaviour
 {
@@ -25,6 +23,6 @@ public class RestartClickListener : MonoBehaviour
 
     void OnButtonClick()
     {
-        SceneManager.LoadScene("Title");
+        isRestartButtonTap = true;
     }
 }

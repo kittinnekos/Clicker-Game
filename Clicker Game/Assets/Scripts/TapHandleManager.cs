@@ -44,7 +44,6 @@ public class TapHandleManager : MonoBehaviour
     private AudioSource[] EnemySESource = new AudioSource[MAX_STAGE_NUM]; // 敵のオーディオソース配列
     private AudioSource FriendPeriodicallySESource;
 
-    private float SEVolume = 0.5f;
     private bool isStartButtonPlaySE = false;
 
     public Tap_SEClip TapSE;
@@ -95,7 +94,6 @@ public class TapHandleManager : MonoBehaviour
         {
             // スタートボタンを押したらインゲームにシーン遷移する
             case var istap when istap[(int)start] == true:
-            if(!CheckPlaySound(TapSESource[START_TAP_SE]))
             if(!isStartButtonPlaySE)
             {
                 PlaySound(TapSESource[START_TAP_SE]);
@@ -110,7 +108,6 @@ public class TapHandleManager : MonoBehaviour
 
             // ドラゴンかボスを押したらスコアを加算する
             case var istap when istap[(int)dragon] == true:
-            Debug.Log("Tap");
             PlaySound(DragonSESource[currentStage]); // 音を鳴らす関数
             Score += AddTapScore;
             isTap[(int)dragon] = false;
