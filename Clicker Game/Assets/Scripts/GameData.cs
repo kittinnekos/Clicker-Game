@@ -29,7 +29,7 @@ public static class GameData
     public static bool[] isTap = new bool[MAX_TAP_STASUS_NUM];
     public static int[,] BuyStack = new int[MAX_SHIFT_BUY_BUTTONS,BUY_BUTTON_NUM]; // 購入履歴　要素数[2,3]
 
-    public static int Score = 1000000;
+    public static int Score = 0;
     public static int AddTapScore = 1;
 
     public static int currentStage = 0;
